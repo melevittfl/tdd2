@@ -42,7 +42,6 @@ class NewVisitorTest(LiveServerTestCase):
 
         # She starts a new list and sees the input is nicely centered there too
         inputbox.send_keys('testing')
-        
 
     def test_can_start_a_list_for_one_user(self):
         # Edith has heard about a cool new online to-do app. She goes
