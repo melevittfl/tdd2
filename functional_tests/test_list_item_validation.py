@@ -63,7 +63,7 @@ class ItemValidationTest(FunctionalTest):
 
         # She sees a helpful error message
         self.wait_for(lambda: self.assertEqual(
-            self.get_item_input_box().text,
+            self.browser.find_element_by_css_selector('.has-error').text,
             "You've already got this in your list"
         ))
 
