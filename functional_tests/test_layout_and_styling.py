@@ -20,3 +20,8 @@ class LayoutAndStylingTest(FunctionalTest):
         # She starts a new list and sees the input is nicely centered there too
         inputbox.send_keys('testing')
 
+    def test_for_favicon(self):
+        self.browser.get(self.live_server_url)
+        self.wait_for(
+            lambda: self.browser.find_element_by_xpath("//link[@rel='icon']")
+        )
